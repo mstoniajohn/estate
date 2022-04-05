@@ -10,8 +10,11 @@ class CustomUserManager(BaseUserManager):
     def email_validator(self, email):
         try:
             validate_email(email)
+            valid_email = True
         except ValidationError:
-            raise ValueError(_('You must provide a valid email'))
+            valid_email = False
+            return False
+        return valid_email
     def create_user(self, username, first_name, last_name, password, email, **extra_fields):
         if not username:
             raise ValueError(_('Users must submit a username'))
