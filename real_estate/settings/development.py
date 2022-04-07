@@ -3,7 +3,7 @@ from .base import *
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackends'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = env("EMAIL_HOST")
 EMAIL_USE_TLS = True
 EMAIL_PORT = env("EMAIL_PORT")
