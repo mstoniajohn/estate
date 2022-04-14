@@ -32,7 +32,8 @@ urlpatterns = [
 
 
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = "Travel Estate Admin"
 admin.site.site_titel = "Travel Estate Admin Portal"
