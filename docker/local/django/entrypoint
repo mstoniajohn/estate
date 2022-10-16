@@ -4,7 +4,7 @@ set -o errexit
 
 set -o pipefail
 
-set - nounset
+set -o nounset
 
 postgres_ready() {
 python << END

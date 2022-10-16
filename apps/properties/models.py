@@ -165,7 +165,7 @@ class PropertyViews(TimeStampedUUIDModel):
         Property, related_name="property_views", on_delete=models.CASCADE
     )
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (
             f"Total views on - {self.property.title} is - {self.property.views} view(s)"
         )
